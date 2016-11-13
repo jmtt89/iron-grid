@@ -1,0 +1,43 @@
+{
+  "name": "iron-responsive-container",
+  "description": "Responsive Grid System for Polymer",
+  "private": false,
+  "authors": [
+    "The5heepDevelopment",
+    "jmtt89"
+  ],
+  "keywords": [
+    "web-components",
+    "web-component",
+    "polymer",
+    "grid",
+    "layout"
+  ],
+  "main": [
+    "iron-responsive-container.html"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jmtt89/iron-responsive-container"
+  },
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  },
+  "homepage": "https://github.com/jmtt89/iron-responsive-container",
+  "_release": "83670171fa",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "83670171fa0f397909f990debec256d903ea7a6e"
+  },
+  "_source": "git://github.com/jmtt89/iron-responsive-container.git",
+  "_target": "master",
+  "_originalSource": "jmtt89/iron-responsive-container",
+  "_direct": true
+}
