@@ -55,19 +55,34 @@
           display : flex;
           flex-wrap: wrap;
           -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          box-sizing: border-box;
+             -moz-box-sizing: border-box;
+                  box-sizing: border-box;
           padding: 0 0.75rem;
         };
 
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
       }
 
       :host:after {
         content: "";
         display: table;
         clear: both;
+      }
+
+      ::content .xs0,::content .xs1,::content .xs2,::content .xs3,::content .xs4,::content .xs5,::content .xs6,::content .xs7,::content .xs8,::content .xs9,::content .xs10,::content .xs11,::content .xs12,
+      ::content .s0,::content .s1,::content .s2,::content .s3,::content .s4,::content .s5,::content .s6,::content .s7,::content .s8,::content .s9,::content .s10,::content .s11,::content .s12,
+      ::content .m0,::content .m1,::content .m2,::content .m3,::content .m4,::content .m5,::content .m6,::content .m7,::content .m8,::content .m9,::content .m10,::content .m11,::content .m12,
+      ::content .l0,::content .l1,::content .l2,::content .l3,::content .l4,::content .l5,::content .l6,::content .l7,::content .l8,::content .l9,::content .l10,::content .l11,::content .l12,
+      ::content .xl0,::content .xl1,::content .xl2,::content .xl3,::content .xl4,::content .xl5,::content .xl6,::content .xl7,::content .xl8,::content .xl9,::content .xl10,::content .xl11,::content .xl12 {
+          position: relative;
+          min-height: 1px;
+          width: 100%;
       }
 
       ::content .xs0 {
