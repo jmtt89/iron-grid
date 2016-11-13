@@ -3,10 +3,16 @@
 	<head>
 		<title>Demo</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 		<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+		<link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+		<link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+
+
 		<link rel="import" href="../iron-responsive-container.html">
 		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="colors.css" type="text/css">
+		<style is="custom-style" include="demo-pages-shared-styles"></style>
 		<style>
 			html,
 			body {
@@ -26,125 +32,131 @@
 	</head>
 
 	<body>
+		<div>
+			<h3>iron-responsive-container Demo</h3>
+			<demo-snippet>
+				<template>
 
-		<h3>Example: Stacked-to-horizontal</h3>
-		<p>Using a single set of .m* grid classes, you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) before becoming horizontal on desktop (medium) devices.</p>
-		<iron-responsive-container>
+					<h3>Example: Stacked-to-horizontal</h3>
+					<p>Using a single set of .m* grid classes, you can create a basic grid system that starts out stacked on mobile devices and tablet devices (the extra small to small range) before becoming horizontal on desktop (medium) devices.</p>
+					<iron-responsive-container>
 
-			<div class="m1 example blue">.m1</div>
-			<div class="m1 example blue">.m1</div>
-			<div class="m1 example blue">.m1</div>
-			<div class="m1 example blue">.m1</div>
-			<div class="m1 example blue">.m1</div>
-			<div class="m1 example blue">.m1</div>
-			<div class="m1 example blue">.m1</div>
-			<div class="m1 example blue">.m1</div>
-			<div class="m1 example blue">.m1</div>
-			<div class="m1 example blue">.m1</div>
-			<div class="m1 example blue">.m1</div>
-			<div class="m1 example blue">.m1</div>
+						<div class="m1 example blue">.m1</div>
+						<div class="m1 example blue">.m1</div>
+						<div class="m1 example blue">.m1</div>
+						<div class="m1 example blue">.m1</div>
+						<div class="m1 example blue">.m1</div>
+						<div class="m1 example blue">.m1</div>
+						<div class="m1 example blue">.m1</div>
+						<div class="m1 example blue">.m1</div>
+						<div class="m1 example blue">.m1</div>
+						<div class="m1 example blue">.m1</div>
+						<div class="m1 example blue">.m1</div>
+						<div class="m1 example blue">.m1</div>
 
-			<div class="m8 example red">.m8</div>
-			<div class="m4 example red">.m4</div>
+						<div class="m8 example red">.m8</div>
+						<div class="m4 example red">.m4</div>
 
-			<div class="m4 example purple">.m4</div>
-			<div class="m4 example purple">.m4</div>
-			<div class="m4 example purple">.m4</div>
+						<div class="m4 example purple">.m4</div>
+						<div class="m4 example purple">.m4</div>
+						<div class="m4 example purple">.m4</div>
 
-			<div class="m6 example green">.m6</div>
-			<div class="m6 example green">.m6</div>
+						<div class="m6 example green">.m6</div>
+						<div class="m6 example green">.m6</div>
 
-		</iron-responsive-container>
+					</iron-responsive-container>
 
-		<h3>Example: Mobile and desktop</h3>
-		<p>Don't want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding .xs* .md* to your columns. See the example below for a better idea of how it all works.</p>
+					<h3>Example: Mobile and desktop</h3>
+					<p>Don't want your columns to simply stack in smaller devices? Use the extra small and medium device grid classes by adding .xs* .md* to your columns. See the example below for a better idea of how it all works.</p>
 
-		<iron-responsive-container>
-			<!-- Stack the columns on mobile by making one full-width and the other half-width -->
-			
-			<div class="xs12 m8 example blue">.xs12 .m8</div>
-			<div class="xs6  m4 example blue">.xs6 .m4</div>
-			
+					<iron-responsive-container>
+						<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+						
+						<div class="xs12 m8 example blue">.xs12 .m8</div>
+						<div class="xs6  m4 example blue">.xs6 .m4</div>
+						
 
-			<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-			
-			<div class="xs6 m4 example red">.xs6 .m4</div>
-			<div class="xs6 m4 example red">.xs6 .m4</div>
-			<div class="xs6 m4 example red">.xs6 .m4</div>
-			
+						<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+						
+						<div class="xs6 m4 example red">.xs6 .m4</div>
+						<div class="xs6 m4 example red">.xs6 .m4</div>
+						<div class="xs6 m4 example red">.xs6 .m4</div>
+						
 
-			<!-- Columns are always 50% wide, on mobile and desktop -->
-			
-			<div class="xs6 example purple">.xs6</div>
-			<div class="xs6 example purple">.xs6</div>
-			
-		</iron-responsive-container>
+						<!-- Columns are always 50% wide, on mobile and desktop -->
+						
+						<div class="xs6 example purple">.xs6</div>
+						<div class="xs6 example purple">.xs6</div>
+						
+					</iron-responsive-container>
 
-		<h3>Example: Mobile, tablet, desktop</h3>
-		<p>Build on the previous example by creating even more dynamic and powerful layouts with tablet .s* classes.</p>
-		<iron-responsive-container>			
-			<div class="xs12 s6 m8 example blue">.xs12 .s6 .m8</div>
-			<div class="xs6 m4 example blue">.xs6 .m4</div>
-			
-			<div class="xs6 s4 example red">.xs6 .s4</div>
-			<div class="xs6 s4 example red">.xs6 .s4</div>
+					<h3>Example: Mobile, tablet, desktop</h3>
+					<p>Build on the previous example by creating even more dynamic and powerful layouts with tablet .s* classes.</p>
+					<iron-responsive-container>			
+						<div class="xs12 s6 m8 example blue">.xs12 .s6 .m8</div>
+						<div class="xs6 m4 example blue">.xs6 .m4</div>
+						
+						<div class="xs6 s4 example red">.xs6 .s4</div>
+						<div class="xs6 s4 example red">.xs6 .s4</div>
 
-			<div class="xs6 s4 example purple">.xs6 .s4</div>
-		</iron-responsive-container>
+						<div class="xs6 s4 example purple">.xs6 .s4</div>
+					</iron-responsive-container>
 
-		<h3>Example: Column wrapping</h3>
-		<p>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line</p>
-		<iron-responsive-container>
-			<div class="xs9 example blue">.xs9</div>
-			<div class="xs4 example blue">.xs4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
-			<div class="xs6 example blue">.xs6<br>Subsequent columns continue along the new line.</div>
-		</iron-responsive-container>
+					<h3>Example: Column wrapping</h3>
+					<p>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line</p>
+					<iron-responsive-container>
+						<div class="xs9 example blue">.xs9</div>
+						<div class="xs4 example blue">.xs4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+						<div class="xs6 example blue">.xs6<br>Subsequent columns continue along the new line.</div>
+					</iron-responsive-container>
 
-		<h3>Offsetting columns</h3>
-		<p>Move columns to the right using .offset-m* classes. These classes increase the left margin of a column by * columns. For example, .offset-m4 moves .md4 over four columns.</p>
-		<iron-responsive-container>
-			
-			<div class="m4 example blue">.m4</div>
-			<div class="m4 offset-m4 example blue">.m4 .offset-m4</div>
-			
-			<div class="m3 offset-m3 example red">.m3 .offset-m3</div>
-			<div class="m3 offset-m3 example red">.m3 .offset-m3</div>
-			
-			<div class="m6 offset-m3 example purple">.m6 .offset-m3</div>
-			
-		</iron-responsive-container>
-		
-		<p>You can also override offsets from lower grid tiers with .offset-*0 classes.</p>
-		<iron-responsive-container>
-			<div class="xs6 s4 example blue"> xs6 s4 </div>
-			<div class="xs6 s4 example blue"> xs6 s4 </div>
-			<div class="xs6 offset-xs3 s4 offset-s0 example purple">xs6 offset-xs3 s4 offset-s0</div>
-		</iron-responsive-container>
+					<h3>Offsetting columns</h3>
+					<p>Move columns to the right using .offset-m* classes. These classes increase the left margin of a column by * columns. For example, .offset-m4 moves .md4 over four columns.</p>
+					<iron-responsive-container>
+						
+						<div class="m4 example blue">.m4</div>
+						<div class="m4 offset-m4 example blue">.m4 .offset-m4</div>
+						
+						<div class="m3 offset-m3 example red">.m3 .offset-m3</div>
+						<div class="m3 offset-m3 example red">.m3 .offset-m3</div>
+						
+						<div class="m6 offset-m3 example purple">.m6 .offset-m3</div>
+						
+					</iron-responsive-container>
+					
+					<p>You can also override offsets from lower grid tiers with .offset-*0 classes.</p>
+					<iron-responsive-container>
+						<div class="xs6 s4 example blue"> xs6 s4 </div>
+						<div class="xs6 s4 example blue"> xs6 s4 </div>
+						<div class="xs6 offset-xs3 s4 offset-s0 example purple">xs6 offset-xs3 s4 offset-s0</div>
+					</iron-responsive-container>
 
-		<h3>Nesting columns</h3>
-		<p>To nest your content with the default grid, add a new .row and set of .s* columns within an existing .s* column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).</p>
+					<h3>Nesting columns</h3>
+					<p>To nest your content with the default grid, add a new .row and set of .s* columns within an existing .s* column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).</p>
 
-		<iron-responsive-container>
-			<div class="s9 example blue">
-				Level 1: .s9
-				<div style="display:flex;width:100%">
-					<div class="xs8 s6 example purple">
-						Level 2: .xs8 .s6
-					</div>
-					<div class="xs4 s6 example purple">
-						Level 2: .xs4 .s6
-					</div>
-				</div>
-			</div>
-		</iron-responsive-container>
+					<iron-responsive-container>
+						<div class="s9 example blue">
+							Level 1: .s9
+							<div style="display:flex;width:100%">
+								<div class="xs8 s6 example purple">
+									Level 2: .xs8 .s6
+								</div>
+								<div class="xs4 s6 example purple">
+									Level 2: .xs4 .s6
+								</div>
+							</div>
+						</div>
+					</iron-responsive-container>
 
-		<h3>Column ordering</h3>
-		<p>Easily change the order of our built-in grid columns with .order-* modifier classes.</p>
+					<h3>Column ordering</h3>
+					<p>Easily change the order of our built-in grid columns with .order-* modifier classes.</p>
 
-		<iron-responsive-container>
-			<div class="m9 order-m3 example blue">.m9 .order-m3</div>
-			<div class="m3 order-m1 example red">.m3 .order-m1</div>
-		</iron-responsive-container>
-	
+					<iron-responsive-container>
+						<div class="m9 order-m3 example blue">.m9 .order-m3</div>
+						<div class="m3 order-m1 example red">.m3 .order-m1</div>
+					</iron-responsive-container>
+				</template>
+			</demo-snippet>
+		</div>
 	</body>
 </html>
